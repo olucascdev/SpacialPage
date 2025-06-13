@@ -1,0 +1,67 @@
+.heart {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: fall 8s linear infinite;
+    opacity: 0.8;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Variação aleatória para múltiplos corações */
+  .heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+  }
+  .heart:nth-child(2) {
+    left: 25%;
+    animation-delay: 1s;
+  }
+  .heart:nth-child(3) {
+    left: 40%;
+    animation-delay: 2s;
+  }
+  .heart:nth-child(4) {
+    left: 55%;
+    animation-delay: 0.5s;
+  }
+  .heart:nth-child(5) {
+    left: 70%;
+    animation-delay: 1.5s;
+  }
+  .heart:nth-child(6) {
+    left: 85%;
+    animation-delay: 0.8s;
+  }
